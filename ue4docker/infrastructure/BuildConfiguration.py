@@ -244,8 +244,6 @@ class BuildConfiguration(object):
 		if self.suffix.startswith('opengl') or self.suffix.startswith('cudagl'):
 			raise RuntimeError('tag suffix cannot begin with "opengl" or "cudagl".')
 		
-		self.platformArgs.append('--storage-opt size=550G')
-		
 		# Determine if we are building CUDA-enabled container images
 		self.cuda = None
 		if self.args.cuda is not None:
